@@ -3,6 +3,9 @@
 # HackerRank Enable
 # import os
 
+from socket import gaierror
+
+
 def gradingStudents(grades):
     """ grading students code """
     result = []
@@ -16,6 +19,10 @@ def gradingStudents(grades):
             else:
                 result.append(grade)
     return result
+
+def test_execution():
+    assert gradingStudents(grades=[73,67,50,22]) == [75,67,50,22]
+    assert gradingStudents(grades=[13,72,38]) == [13,72,40]
 
 if __name__ == '__main__':
     # HackerRank Enable
@@ -38,3 +45,4 @@ if __name__ == '__main__':
     # fptr.write('\n'.join(map(str, result)))
     # fptr.write('\n')
     # fptr.close()
+    test_execution()
