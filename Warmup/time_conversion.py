@@ -3,6 +3,7 @@ import os
 
 def timeConversion(s):
     """ Time Conversion Code """
+    
     try:
         h,m,sec = map(int, s[:-2].split(':'))
         meridiem = s[-2:]
@@ -13,6 +14,7 @@ def timeConversion(s):
 
 def test_execution():
     """ Basic Test Cases """
+
     assert timeConversion(s='12:01:01PM') == '12:01:01'
     assert timeConversion(s='12:01:01AM') == '00:01:01'
     assert timeConversion(s='217$%&') == 'EXPECTED INPUT FORMAT hh:mm:ssAM or hh:mm:ssPM'
@@ -29,5 +31,5 @@ if __name__ == '__main__':
     # HackerRank Enable
     # fptr.write(result + '\n')
     # fptr.close()
-    
+
     test_execution()
